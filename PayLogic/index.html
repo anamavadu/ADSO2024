@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/estilos.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>PayLogic-Inicio</title>
+
+</head>
+
+<body id="home-page">
+    
+    <header>
+        <!-- Primera barra con íconos -->
+        <div class="top-bar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="top-icons">
+                            <a href="#"><i class="fas fa-bell fa-lg"></i></a>
+                            <a href="#"><i class="fas fa-cog fa-lg"></i></a>
+                            <a href="#"><i class="fas fa-user-circle fa-lg"></i></a>
+                            <a href="ingreso.html" class="logout-button">Cerrar sesión</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Segunda barra con el título -->
+        <div class="title-bar">
+            <h1>Bienvenido a PayLogic</h1>
+        </div>
+        
+        <!-- Tercera barra con el menú de navegación horizontal -->
+        <div class="nav-bar">
+            <div class="container">
+                <div class="menu-horizontal">
+                    <a href="#"><i class="fas fa-user-plus fa-lg"></i><span>Nuevo empleado</span></a>
+                    <a href="#"><i class="fas fa-file-alt fa-lg"></i><span>Solicitudes</span></a>
+                    <a href="#"><i class="fas fa-calendar-times fa-lg"></i><span>Ausencias</span></a>
+                </div>
+            </div>
+        </div>
+    
+    </header>
+    
+    <!-- Botón para abrir/cerrar la barra lateral -->
+    <span class="sidebar-toggle" id="sidebarToggle"><i class="fas fa-bars"></i></span>
+    
+    <!-- Barra lateral -->
+    <div class="sidebar collapsed" id="sidebar">
+        <div class="sidebar-content">
+            
+            <!-- Sección superior con título -->
+            <div class="sidebar-header">
+                <h2>PayLogic</h2>
+            </div>
+            
+            <!-- Menú de navegación -->
+            <div class="menu">
+                <ul>
+                    <li><a href="#"><i class="fas fa-user-plus"></i> Nuevo empleado</a></li>
+                    <li><a href="#"><i class="fas fa-file-alt"></i> Solicitudes</a></li>
+                    <li><a href="#"><i class="fas fa-calendar-times"></i> Ausencias y permisos</a></li>
+                </ul>
+            </div>
+            
+            <!-- Sección inferior con botón Calendario -->
+            <div class="bottom-section">
+                <a href="#"><i class="fas fa-calendar-alt"></i> Calendario</a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Contenido principal de la página -->
+<main class="container main-content" style="margin-left: 270px; padding-top: 20px;">
+    
+    <!-- Recuadro para mostrar la última nómina -->
+    <div class="card mt-4">
+        <div class="card-body">
+            <h3 class="card-title"><i class="fas fa-file-invoice-dollar invoice-icon"></i> Última nómina</h3>
+            <p class="card-text">Fecha: 10 de junio de 2024</p>
+        </div>
+    </div>
+    
+    <!-- Recuadro para mostrar la próxima nómina -->
+    <div class="card mt-4">
+        <div class="card-body">
+            <h3 class="card-title"><i class="fas fa-calendar-alt calendar-icon"></i> Próxima nómina</h3>
+            <p class="card-text">Fecha: 25 de junio de 2024</p>
+        </div>
+    </div>
+<!-- Recuadro para mostrar notificaciones -->
+<div class="notifications-container">
+    <div class="card mt-4 float-right" style="width: 300px;">
+        <div class="card-body">
+            <h2 class="card-title">Notificaciones</h2>
+            <div class="notification">
+                <i class="fas fa-bell"></i>
+                <p class="card-text">No hay nuevas notificaciones.</p>
+            </div>
+        </div>
+    </div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <p>&copy; 2024 PayLogic. Todos los derechos reservados.</p>
+        <p>Desarrollado por <a href="#">Logic Labs Solutions</a></p>
+    </div>
+</footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="JS/script.js"></script>
+
+    <script>
+        // Script para abrir y cerrar la barra lateral
+        document.getElementById('sidebarToggle').addEventListener('click', function() {
+            var sidebar = document.getElementById('sidebar');
+            if (sidebar.classList.contains('collapsed')) {
+                sidebar.classList.remove('collapsed');
+            } else {
+                sidebar.classList.add('collapsed');
+            }
+        });
+    </script>
+
+</body>
+</html>

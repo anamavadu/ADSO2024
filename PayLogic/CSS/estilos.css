@@ -1,0 +1,478 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Aplicar overflow-x: hidden; a html y body */
+html, body {
+    overflow-x: hidden;
+}
+
+/* Estilos para el mensaje */
+#mensaje {
+    text-align: center; /* Centrar el mensaje */
+    font-weight: bold; /* Hacer el texto en negrita */
+}
+
+/* Estilo específico para los mensajes de error */
+#mensaje.error {
+    color: #f00; /* Rojo */
+}
+
+/* Estilo específico para los mensajes de éxito */
+#mensaje.success {
+    color: #0f0; /* Verde */
+}
+
+/* Estilos específicos para ingreso.html */
+#ingreso-page {
+    background-color: #210a4d;
+    color: #ffffff;
+}
+
+/* Centrar el texto del párrafo */
+.centered-text {
+    text-align: center;
+}
+
+#crearCuenta {
+    color: #1cd2ff;
+    text-decoration: none;
+}
+
+#crearCuenta:hover {
+    text-decoration: underline;
+}
+
+/* Estilos del Formulario */
+#ingreso-page .contenedor,
+#registro-page .contenedor {
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+#ingreso-page .contenedor {
+    background-color: #6758bd;
+}
+
+#registro-page .contenedor {
+    background-color: #6758bd;
+}
+
+h2 {
+    text-align: center;
+}
+
+.form-grupo {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+button {
+    width: 95%; 
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #3b3b3b;
+    display: block; /* Hacer que el botón sea de bloque para centrarlo */
+    margin: 10px auto; /* Alinear el botón al centro */
+}
+
+/* Estilos para el botón de Iniciar Sesión */
+.btn-iniciar-sesion {
+    width: 50%; 
+    background-color: #5e1bda; /* Color de fondo del botón */
+    color: #ffffff; /* Color del texto del botón */
+    cursor: pointer;
+}
+
+.btn-iniciar-sesion:hover {
+    background-color: rgb(125, 214, 255); /* Color de fondo al pasar el mouse */
+    color: #120649; /* Color del texto al pasar el mouse */
+}
+
+/* Estilos específicos para registro.html */
+#registro-page {
+    background-color: #210a4d;
+    color: #ffffff;
+}
+
+#registro-page button {
+    width: 50%;
+    background-color: #5e1bda;
+    color: #ffffff;
+    text-align: center;
+}
+
+#registro-page button:hover {
+    background-color: rgb(125, 214, 255);
+    color: #120649;
+}
+
+/* Estilos específicos para index.html */
+#home-page {
+    background-color: white;
+}
+
+#home-page .top-bar {
+    background-color: #5c49c4;
+    color: white;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+}
+
+#home-page .top-bar .container {
+    max-width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#home-page .top-bar .top-icons {
+    display: flex;
+    gap: 5px;
+}
+
+#home-page .top-bar .top-icons a {
+    color: white;
+    margin: 0;
+    font-size: 20px;
+    margin-right: 15px;
+}
+
+#home-page .top-icons a {
+    transition: transform 0.3s ease;
+}
+
+#home-page .top-icons a:hover {
+    transform: scale(1.2); /* Escala el ícono al 120% */
+}
+
+#home-page .top-icons a.clicked {
+    transform: scale(1.2); /* Escala el ícono al hacer clic */
+    transition: transform 0.3s ease;
+}
+
+#home-page .logout-button {
+    display: inline-block;
+    padding: 4px 10px;
+    background-color: #8f7bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#home-page .logout-button:hover {
+    background-color: #eeca00;
+    transform: translateX(5px); /* Mueve el botón 5px a la derecha al hacer hover */
+    transition: transform 0.3s ease; /* Transición suave */
+}
+
+#home-page .logout-button.clicked {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#home-page .title-bar {
+    background-color: #5c49c4;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    margin-top: -30px;
+}
+
+#home-page .title-bar h1 {
+    transition: transform 0.3s ease; /* Transición suave de 0.3 segundos */
+}
+
+#home-page .title-bar h1:hover {
+    transform: scale(1.1); /* Aumenta el tamaño al 110% al hacer hover */
+}
+
+#home-page .nav-bar {
+    background-color: #5c49c4;
+    padding: 10px 0;
+}
+
+#home-page .nav-bar .menu-horizontal {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+#home-page .nav-bar .menu-horizontal a {
+    color: white;
+    margin: 0 15px;
+    text-align: center;
+}
+
+#home-page .nav-bar .menu-horizontal a i {
+    display: block;
+    font-size: 24px;
+    font-size: 36px; /* Tamaño del ícono */
+    width: 70px; /* Ajusta el tamaño del círculo */
+    height: 65px; /* Ajusta el tamaño del círculo */
+    line-height: 60px; /* Para centrar el ícono verticalmente */
+    border-radius: 50%; /* Hace el fondo circular */
+    background-color: #1c0e63; /* Color de fondo del círculo */
+    margin: 0 auto; /* Centra el ícono horizontalmente */
+}
+
+#home-page .nav-bar .menu-horizontal a span {
+    display: block;
+    font-size: 18px; /* Ajusta el tamaño del texto */
+    margin-top: 10px; /* Espacio entre el ícono y el texto */
+}
+
+#home-page .menu-horizontal a {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#home-page .menu-horizontal a:hover {
+    transform: translateX(5px); /* Mueve el enlace 5px a la derecha al hacer hover */
+    transition: transform 0.3s ease; /* Transición suave */
+}
+
+#home-page .menu-horizontal a.clicked i {
+    transform: translateX(5px); /* Mueve el ícono 5px a la derecha cuando se activa */
+    transition: transform 0.3s ease; /* Agrega una transición suave */
+}
+
+#home-page .sidebar {
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: #7163c0;
+    color: white;
+    padding-top: 0px;
+    transition: width 0.3s;
+}
+
+#home-page .sidebar .sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+    background-color: #9d90e4;
+    color: rgb(46, 18, 121);
+}
+
+#home-page .sidebar .sidebar-header h2 {
+    margin-left: 50px;
+    font-size: 40px;
+}
+
+#home-page .sidebar .menu {
+    padding: 15px 0;
+}
+
+#home-page .sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+#home-page .sidebar ul li {
+    padding: 10px 15px;
+}
+
+#home-page .sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+#home-page .sidebar ul li a i {
+    margin-right: 10px;
+}
+
+#home-page .sidebar .bottom-section {
+    position: absolute;
+    bottom: 20px;
+    width: 95%;
+    text-align: left;
+    padding-left: 15px;
+}
+
+#home-page .sidebar .bottom-section a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px; /* Ajusta el padding para centrar correctamente */
+    transition: background-color 0.3s, transform 0.3s; /* Transición suave */
+}
+
+#home-page .sidebar .bottom-section a:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Ejemplo de cambio de color al hacer hover */
+}
+
+#home-page .sidebar .bottom-section a i {
+    margin-right: 10px;
+}
+
+#home-page .sidebar-toggle {
+    font-size: 25px;
+    cursor: pointer;
+    color: white;
+    padding: 10px 15px;
+    background-color: #343a4000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+#home-page .sidebar.collapsed {
+    width: 50px;
+}
+
+#home-page .sidebar.collapsed .sidebar-content {
+    display: none;
+}
+
+#sidebar .menu ul li a {
+    display: block;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    transition: transform 0.3s ease; /* Transición suave para el movimiento */
+}
+
+#sidebar .menu ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Ejemplo de cambio de color al hacer hover */
+}
+
+/* Estilos para el contenedor de notificaciones */
+.notifications-container {
+    position: absolute;
+    top: 250px; /* Ajusta la distancia desde la parte superior según sea necesario */
+    right: 30px; /* Ajusta el margen derecho según sea necesario */
+    z-index: 100; /* Asegura que esté por encima del contenido principal si es necesario */
+    width: 360px; /* Ajusta el ancho del recuadro de notificaciones según sea necesario */
+}
+
+.notifications-container .card-body {
+    text-align: left; /* Ajusta el texto justificado */
+}
+
+.notifications-container .card-title {
+    margin-bottom: 10px; /* Espacio entre el título y la campana */
+}
+
+.notifications-container .notification {
+    display: flex;
+    align-items: center;
+}
+
+.notifications-container .notification i {
+    margin-right: 10px; /* Espacio entre el icono y el texto */
+}
+
+/* Estilos específicos para el contenedor principal de la página */
+.main-content {
+    margin-top: 100px; /* Ajusta el margen superior según sea necesario */
+    margin-bottom: 50px; /* Margen inferior para separar del footer */
+    padding: 20px; /* Espaciado interno */
+    background: linear-gradient(to right, #beb2e9, #bca9ff);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 800px; /* Ancho máximo del contenido */
+    margin-left: auto; /* Centra horizontalmente */
+    margin-right: auto; /* Centra horizontalmente */
+}
+
+/* Estilos para las tarjetas */
+.main-content .card {
+    background: white; /* Fondo blanco para las tarjetas */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    margin-top: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.main-content .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Títulos de las tarjetas */
+.main-content .card-title {
+    font-size: 24px;
+    color: #343a40;
+    display: flex;
+    align-items: center;
+}
+
+.main-content .card-title i {
+    margin-right: 10px;
+}
+
+/* Estilos específicos para los íconos */
+.main-content .invoice-icon {
+    color: #8f53ff; /* Color para el ícono de última nómina */
+}
+
+.main-content .calendar-icon {
+    color: #8f53ff; /* Color para el ícono de próxima nómina */
+}
+
+/* Texto de las tarjetas */
+.main-content .card-text {
+    font-size: 20px;
+    color: #6c757d;
+}
+
+/* Transiciones */
+.main-content .card-body {
+    transition: all 0.3s ease;
+}
+
+/* Estilos para el footer */
+.footer {
+    background-color: #7163c0; /* Color de fondo */
+    color: white; /* Color del texto */
+    padding: 5px 0; /* Espaciado interno */
+    text-align: center; /* Alineación del texto */
+    position: relative; /* Para asegurarnos de que se comporte bien con otros elementos */
+    bottom: 0; /* Asegura que esté en la parte inferior */
+    width: 100%; /* Asegura que ocupe todo el ancho de la página */
+    margin-top: 190px; /* Separación respecto al contenido principal */
+    font-size: 14px;
+}
+
+.footer .container {
+    max-width: 1200px; /* Ancho máximo del contenido del footer */
+    margin: 0 auto; /* Centra el contenido horizontalmente */
+    padding: 0 15px; /* Espaciado interno lateral */
+}
+
+.footer a {
+    color: #ffc107; /* Color de los enlaces */
+    text-decoration: none; /* Sin subrayado */
+}
+
+.footer a:hover {
+    text-decoration: underline; /* Subrayado al pasar el mouse por encima */
+    color: #1cd2ff;
+}
